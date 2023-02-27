@@ -1,0 +1,17 @@
+[package]
+name = "chaos_lan_speed_tester"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.25.0", features = ["full"] }
+tokio-stream = "0.1.12"
+warp = "0.3.3"
+rand = { version = "0.8.5", features = ["small_rng"] }
+bytesize = "1.2.0"
+
+[profile.release]
+lto = "on"
+opt-level = 3
